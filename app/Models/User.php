@@ -17,11 +17,13 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    use HasFactory;
+    protected $fillable = ['name', 'email', 'password', 'role_id', 'photo'];
+
+    public function role()
+    {
+        $this->belongsTo(Role::class, with('rle_id'));
+    }
 
     /**
      * The attributes that should be hidden for serialization.
