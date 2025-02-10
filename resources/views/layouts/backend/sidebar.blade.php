@@ -59,7 +59,7 @@
                             </a>
                             <ul>
                                 <li><a href="index.html">Deals Dashboard</a></li>
-                                <li><a href="leads-dashboard.html">Leads Dashboard</a></li>
+                                <li><a href="{{url('user')}}">Users</a></li>
                                 <li><a href="project-dashboard.html">Project Dashboard</a></li>
                             </ul>
                         </li>

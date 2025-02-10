@@ -28,11 +28,9 @@
                     {{ $user['email'] }}
                 </td>
                 <td>
-
-                    {{ $user["role"]?$user->role->name: 'No role assign' }}
-                    {{-- {{ $user->role ? $user->role->name : 'No Role Assigned' }} --}}
-
-                    {{-- $user->role ? $user->role->name : 'No Role Assigned'  --}}
+                   
+                        {{$user->role ? $user->role->name : 'No Role Assigned' }}
+                 
                 </td>
                 <td>
                     <img width="100" src="{{asset('image')}}/{{$user['photo']}}" alt="">
@@ -60,6 +58,6 @@
 
     </table>
     <div class="d-flex justify-content-end">
-        {{!!$users->links( 'pagination::bootstrap-5')!!}}
+        {{$users->links( 'pagination::bootstrap-5')}}
     </div>
 @endsection

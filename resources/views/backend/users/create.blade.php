@@ -39,9 +39,16 @@
                             </div>
 
                             <div class="mb-3 row">
-                                <label class="col-form-label col-md-2">Role id</label>
+                                <label class="col-form-label col-md-2">Role </label>
                                 <div class="col-md-10">
-                                    <input type="test" class="form-control" name="role">
+                                    {{-- <input type="test" class="form-control" name="role"> --}}
+                                    <select name="role" id="" class="select-form form-control">
+                                        <option value="">select Role</option>
+                                        @foreach ($roles_name as $role_name)
+                                        <option value="{{$role_name->id}}">{{$role_name->name}}</option>
+                                        @endforeach
+                                        
+                                    </select>
                                 </div>
                                 @error('role')
                                     <span style="color: red">{{ $message }}</span>
@@ -70,9 +77,6 @@
                         </form>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>

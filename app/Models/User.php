@@ -22,7 +22,7 @@ class User extends Authenticatable
 
     public function role()
     {
-        $this->belongsTo(Role::class, with('rle_id'));
+        return $this->belongsTo(Role::class, 'role_id');
     }
 
     /**
