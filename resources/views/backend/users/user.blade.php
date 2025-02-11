@@ -1,6 +1,8 @@
 @extends('layouts.backend.main')
 @section('page_content')
   
+
+<x-messageBanner msg="User sing up successfully"/>
 @if (session('success'))
     <div><span class="alert alert-success">{{session('success')}}</span></div>
 @endif

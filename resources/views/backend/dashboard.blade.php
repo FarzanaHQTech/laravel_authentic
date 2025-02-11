@@ -3,10 +3,8 @@
 
 @section('page_content')
     
-
-
-
-    
+<x-messageBanner msg="User login successfully"/>
+<x-messageBanner msg="User sing in successfully"/>
 
         <div class="row">
             <div class="col-md-12">
